@@ -1,0 +1,992 @@
+Common Core of Data, Public Elementary/Secondary School Universe Survey, 2013-14
+
+FILE NAME = sc131a_supp.txt, 2013-14
+
+Numer of variables = 324
+
+Number of observations = 102,815
+
+(*) Fields have one explicit decimal place, unless otherwise noted.
+
+(^) Fields have six explicit decimal places
+
+(+) Fields represent subfields of the fields immediately preceding them.
+
+The file contains data for the school year 2013–14 sorted by the NCES assigned school identification code (NCESSCH). Data
+presented in this release are available in two formats—SAS datasets (.sas7bdat) and tab-separated values text files (.txt).
+
+Note that starting with the 2002–03 CCD, all numeric fields contain a -1 to indicate missing and a -2 to indicate not applicable.
+Previously, numeric fields contained an “M” to indicate missing and an “N” to indicate not applicable.  Character fields continue
+to use “M” for missing and “N” for not applicable. “AN” and “N” are alphanumeric and numeric data, respectively.  Starting with 
+the 2009-10 2a file, the numeric fields were tested against NCES data quality standards; a -9 value indicates that the data item 
+did not meet those standards.
+
+
+===================================================================================================================================
+
+Variable             Data   
+Name          Order  Type   Description        
+
+===================================================================================================================================     
+
+SURVYEAR      1	     AN	    Year corresponding to survey record.
+
+NCESSCH       2      AN     Unique NCES public school ID (7-digit NCES agency ID (LEAID) + 5-digit NCES school ID (SCHNO).    
+
++FIPST        3      AN     American National Standards Institute (ANSI) state code.
+
+                             01  =  Alabama        02  =  Alaska          04  =  Arizona
+                             05  =  Arkansas       06  =  California      08  =  Colorado
+                             09  =  Connecticut    10  =  Delaware        11  =  District of Columbia
+                             12  =  Florida        13  =  Georgia         15  =  Hawaii
+                             16  =  Idaho          17  =  Illinois        18  =  Indiana
+                             19  =  Iowa           20  =  Kansas          21  =  Kentucky
+                             22  =  Louisiana      23  =  Maine           24  =  Maryland
+                             25  =  Massachusetts  26  =  Michigan        27  =  Minnesota
+                             28  =  Mississippi    29  =  Missouri        30  =  Montana
+                             31  =  Nebraska       32  =  Nevada          33  =  New Hampshire
+                             34  =  New Jersey     35  =  New Mexico      36  =  New York
+                             37  =  North Carolina 38  =  North Dakota    39  =  Ohio
+                             40  =  Oklahoma       41  =  Oregon          42  =  Pennsylvania
+                             44  =  Rhode Island   45  =  South Carolina  46  =  South Dakota
+                             47  =  Tennessee      48  =  Texas           49  =  Utah
+                             50  =  Vermont        51  =  Virginia        53  =  Washington
+                             54  =  West Virginia  55  =  Wisconsin       56  =  Wyoming
+                             59  =  Bureau of Indian Education
+                             60  =  American Samoa 
+			     63  =  Department of Defense Education Activity
+                             66  =  Guam           69  =  Northern Marianas
+                             72  =  Puerto Rico    78  =  Virgin Islands
+
++LEAID        4      AN     NCES local education agency (LEA) ID.  
+
+                            NOTE: The state to which the LEA belongs is identified by the first two digits (ANSI state code) of the LEAID. 
+
++SCHNO        5      AN     NCES school ID. 
+                            
+                            NOTE: SCHNO is a unique number within an LEA.
+                            By combining LEAID with SCHNO, each school can be uniquely identified within the total file (see NCESSCH above).
+
+STID          6      AN     State’s own ID for the education agency.
+
+SEASCH        7      AN     State’s own ID for the school.
+
+LEANM         8      AN     Name of the education agency that operates this school.
+ 
+SCHNAM        9      AN     Name of the school.
+
+		            NOTE: Throughout the remainder of this file, the following codes may appear as representing missing values whenever 
+                                  they are present in the data or the documentation.
+                                  
+                                  M: when alphanumeric data are missing; that is, a value is expected but none was measured.
+                                 -1: when numeric data are missing; that is, a value is expected but none was measured.
+                                  N: when alphanumeric data are not applicable; that is, a value is neither expected nor measured.
+                                 -2: when numeric data are not applicable; that is, a value is neither expected nor measured.
+				 -9: when the submitted data item does not meet NCES data quality standards; the value is suppressed.
+
+PHONE         10     AN     Telephone number of school.
+
+MSTREE        11     AN     The mailing address of the school— may be a street address, a P.O. Box number, or, if verified that there is no  
+                              address beyond CITY, STATE, and ZIP, the character “N.” 
+
+MCITY         12     AN     School mailing address city.
+
+MSTATE        13     AN     Two-letter U.S. Postal Service abbreviation of the state where the mailing address is located (see ANSI state  
+                              codes and abbreviations used in CCD dataset).
+
+MZIP          14     AN     Five-digit U.S. Postal Service ZIP code for the mailing address.
+
+MZIP4         15     AN     Four-digit (ZIP+4) code for the mailing address. If the mailing address has been assigned the additional  
+                              four-digit +4 ZIP, this field contains that number; otherwise, this field is blank.
+
+LSTREE        16     AN     School location street address.
+
+LCITY         17     AN     School location city.
+
+LSTATE        18     AN     Two-letter U.S. Postal Service abbreviation of the state where the school address is located (see ANSI  
+                              state codes and abbreviations used in CCD dataset).
+
+LZIP          19     AN     Five-digit U.S. Postal Service ZIP code for the location address.
+
+LZIP4         20     AN     Four-digit (ZIP+4) code for the location address. If the location address has been assigned the additional  
+                              four-digit +4 ZIP, this field contains that number; otherwise, this field is blank.
+  
+TYPE          21     AN     NCES code for type of school:
+
+                            1 = Regular school
+
+                            2 = Special education school
+
+                            3 = Vocational school
+
+                            4 = Other/alternative school
+
+                            5 = Reportable program (new code starting in 2007-08)
+
+STATUS        22     AN     NCES code for the school status:
+
+                            1 = School was operational at the time of the last report and is currently operational.
+
+                            2 = School has closed since the time of the last report.
+
+                            3 = School has been opened since the time of the last report.
+
+                            4 = School was in existence, but not reported in a previous year’s CCD school universe survey, and is now 
+                                being added.
+
+                            5 = School was listed in previous year’s CCD school universe as being affiliated with a different  
+                                education agency.
+
+                            6 = School is temporarily closed and may reopen within three years.
+
+                            7 = School is scheduled to be operational within two years.
+
+                            8 = School was closed on a previous year’s file but has reopened.
+
+UNION         23     AN     Supervisory Union Identification Number. For supervisory union administrative centers and component 
+                              agencies, this is a number assigned by the state to the union. Additionally, if the agency is a county 
+                              superintendent, this is the ANSI county number. If no number was reported, the field will contain "000".
+
+ULOCAL        24     AN     NCES urban-centric locale code.  
+
+			    NOTE: Starting in 2006–07, CCD data files contain a new locale code system that is based on the urbanicity 
+                              of the school location.  Prior to 2006–07, the locale code was assigned based on a school’s metro status.  
+                              See appendix C, Glossary, for more detail. 
+
+			    11 = City, Large: Territory inside an urbanized area and inside a principal city with population of 250,000 
+                                 or more.
+
+			    12 = City, Mid-size: Territory inside an urbanized area and inside a principal city with a population less 
+                                 than 250,000 and greater than or equal to 100,000.
+
+			    13 = City, Small: Territory inside an urbanized area and inside a principal city with a population less 
+                                 than 100,000.
+
+			    21 = Suburb, Large: Territory outside a principal city and inside an urbanized area with population of 
+                                 250,000 or more.
+
+			    22 = Suburb, Mid-size: Territory outside a principal city and inside an urbanized area with a population 
+                                 less than 250,000 and greater than or equal to 100,000.
+
+			    23 = Suburb, Small: Territory outside a principal city and inside an urbanized area with a population less 
+                                 than 100,000.
+
+			    31 = Town, Fringe: Territory inside an urban cluster that is less than or equal to 10 miles from an urbanized 
+                                 area.
+
+			    32 = Town, Distant: Territory inside an urban cluster that is more than 10 miles and less than or equal to 35 
+                                 miles from an urbanized area.
+
+			    33 = Town, Remote: Territory inside an urban cluster that is more than 35 miles from an urbanized area.
+
+			    41 = Rural, Fringe: Census-defined rural territory that is less than or equal to 5 miles from an urbanized 
+                                 area, as well as rural territory that is less than or equal to 2.5 miles from an urban cluster.
+
+			    42 = Rural, Distant: Census-defined rural territory that is more than 5 miles but less than or equal to 25 
+                                 miles from an urbanized area, as well as rural territory that is more than 2.5 miles but less than or 
+                                 equal to 10 miles from an urban cluster.
+
+ 			    43 = Rural, Remote: Census-defined rural territory that is more than 25 miles from an urbanized area                       
+          		         and is also more than 10 miles from an urban cluster.
+
+
+LATCOD        25^    N      Latitude. Based on the location of the school, the value of LATCOD ranges from 14 to 71. It contains an 
+                              explicit decimal point. The digits to the left of the decimal represent the number of degrees from the 
+                              equator; the digits to the right of the decimal represent the fraction of the next degree carried out to 
+                              six decimal places.
+
+LONCOD        26^    N	    Longitude. Based on the location of the school, the value of LONCOD ranges from -177 to 146. The minus 
+                              sign (-) indicates west of the prime meridian. It contains an explicit decimal point. The digits to the 
+                              left of the decimal point represent the number of degrees from the prime meridian; the digits to the right 
+                              of the decimal point represent the fraction of the next degree carried out to six decimal places.
+
+CONUM         27     AN     ANSI county number (two digit ANSI state numeric code + three digits ANSI county code) based on the 
+                              location of the school.                                                                                                                                                                         		
+CONAME        28     AN	    County name based on the location of the school. 
+
+CDCODE        29     AN	    Congressional district code based on location of administrative office. ANSI numeric code for the congressional 
+                              districts that are legislatively defined subdivision of the state for the purpose of electing representatives 
+                              to the House of Representative of the United States Congress. The first two digits are the ANSI state numeric 
+                              code, which makes the congressional district code unique across states (see Appendix C Glossary for detail). 
+
+BIES	      30     AN	    Bureau of Indian Education (BIE) school. Indicator of whether or not a school was also reported by the Bureau of 
+                              Indian Education in their submission of school data. Only states or jurisdictions other than BIE can contain a 
+			      value of “1” (“Yes”) for this flag.
+
+			    1 = Yes
+
+			    2 = No
+
+
+RECONSTY      31     AN     Reconstituted Year. This indicates the latest year that the school was reported as reconstituted.
+
+RECONSTF      32     AN     Reconstituted Flag.  This flag indicates that the school was restructured, transformed, or otherwise 
+			      substantially changed as a consequence of the state’s accountability system, or as a result of a School 
+                              Improvement Grant (SIG), but is not recognized as a new school for the CCD.
+
+			    1= Yes 
+
+			    2 = No
+
+SMEMPUP       33     AN     Multi-year edit - School Membership
+
+ISMEMPUP      34     AN     Multi-year edit flag- School Membership
+
+SFTEPUP       35     AN     Multi-year edit - School Teacher
+
+ISFTEPUP      36     AN     Multi-year edit flag - School Teacher
+
+SFLE          37     AN     Multi-year edit - School Free Lunch
+
+ISFLE         38     AN     Multi-year edit flag - School Free Lunch
+
+SPFEMALE      39     AN     Multi-year edit - School Gender
+
+ISPFEMALE     40     AN     Multi-year edit flag - School Gender
+
+SPWHITE       41     AN     Multi-year edit - School Race
+
+ISPWHITE      42     AN     Multi-year edit flag - School Race
+
+SPELM         43     AN     Multi-year edit - School Grade
+
+ISPELM        44     AN     Multi-year edit flag - School Grade
+
+
+FTE           45*    N	    Total full-time-equivalent classroom teachers.  Full-time equivalency reported to the nearest hundredth; 
+                              field includes two explicit decimal places.
+
+GSLO          46     AN	    School low grade offered. The following codes are used:
+
+			    UG = Ungraded
+
+			    PK = Prekindergarten
+
+			    KG = Kindergarten
+
+			    01–12 = 1st through 12th grade
+
+			    N = School had no students reported
+
+			    UG and N each occur only in isolation from other codes.  When one of these does occur, it is both the 
+                              lowest (GSLO) and the highest (GSHI) grade.
+
+GSHI          47    AN	    School high grade offered.  The following codes are used:
+
+			    UG = Ungraded
+
+			    PK = Prekindergarten
+
+			    KG = Kindergarten
+
+			    01–12 = 1st through 12th grade
+
+			    N = School had no students reported
+
+			    UG and N each occur only in isolation from other codes.  When one of these does occur, it is both the 
+                              lowest (GSLO) and the highest (GSHI) grade.
+
+PKOFFRD	      48     AN	    Prekindergarten offered.
+
+                            1 = Yes
+
+                            2 = No
+			    
+
+KGOFFRD	      49     AN	    Kindergarten offered.
+
+                            1 = Yes
+
+                            2 = No
+			    
+
+G01OFFRD      50     AN	    First grade offered.
+
+                            1 = Yes
+
+                            2 = No
+			    
+
+G02OFFRD      51     AN	    Second grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G03OFFRD      52     AN	    Third grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G04OFFRD      53     AN	    Fourth grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G05OFFRD      54     AN	    Fifth grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G06OFFRD      55     AN	    Sixth grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G07OFFRD      56     AN	    Seventh grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G08OFFRD      57     AN	    Eighth grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G09OFFRD      58     AN	    Ninth grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G10OFFRD      59     AN	    Tenth grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G11OFFRD      60     AN	    Eleventh grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+G12OFFRD      61     AN	    Twelfth grade offered.
+
+                            1 = Yes
+
+                            2 = No
+
+UGOFFRD       62     AN	    Ungraded offered.
+
+                            1 = Yes
+
+                            2 = No
+
+LEVEL	      63     AN	    School level.  The following codes were calculated from the school’s corresponding GSLO and GSHI values: 
+
+			    1 = Primary (low grade = PK through 03; high grade = PK through 08)
+
+			    2 = Middle (low grade = 04 through 07; high grade = 04 through 09)
+
+			    3 = High (low grade = 07 through 12; high grade = 12 only)
+
+			    4 = Other (any other configuration not falling within the above three categories, including ungraded)
+			    
+TITLEISTAT    64     AN     Title I School Status. This flag was added to the school file starting in 2010-11. It indicates whether 
+			      and in which Title I program a school is eligible for participation under authorization of Title I of 
+			      Public Law 103-382. There are two types of Title I programs: Targeted Assistance (TAS) and Schoolwide 
+			      (SWP). Eligibility for either programs means the school is Title I eligible, regardless of whether 
+			      they decide to provide a program to their students. 
+
+			    1 = School is eligible for Title I Targeted Assistance (TAS) but provides no program
+
+			    2 = School is eligible for Title I Targeted Assistance (TAS) and provides TAS program
+
+			    3 = School is eligible for Title I Schoolwide program (SWP) and provides TAS program
+
+			    4 = School is eligible for Title I Schoolwide program (SWP) but provides no program
+
+			    5 = School is eligible for Title I Schoolwide program (SWP) and provides Title I Schoolwide program
+
+			    6 = School is not eligible for either Title I Targeted Assistance (TAS ) or Schoolwide program
+
+			    The following table shows how TITLEISTAT translates to TITLEI and STITLE. 
+
+			      TITLEISTAT	TITLEI	STITLI
+
+				1 	        1(Yes)	2 (No)
+
+				2 	        1(Yes)	2 (No)
+
+				3 	        1(Yes)	1(Yes)
+
+				4 	        1(Yes)	1(Yes)
+
+				5 	        1(Yes)	1(Yes)
+
+				6 	        2 (No)	N (Not Applicable)
+
+
+TITLEI        65     AN	    Title I Eligible School.  A Title I school designated under appropriate state and federal regulations as  
+                              being eligible for participation in programs authorized by Title I of Public Law 103-382.
+ 
+                            1 = Yes
+
+                            2 = No
+
+STITLI        66     AN	    School-wide Title I.  A program in which all the pupils in a school are designated under appropriate state  
+                              and federal regulations as being eligible for participation in programs authorized by Title I of  
+                              Public Law 103-382.
+
+                            1 = Yes
+
+                            2 = No
+
+MAGNET        67     AN	    Magnet school.  Regardless of the source of funding, a magnet school or program is a special school or  
+                              program designed to attract students of different racial/ethnic backgrounds for the purpose of reducing,  
+                              preventing, or eliminating racial isolation and/or to provide an academic or social focus on a particular  
+                              theme.
+
+                            1 = Yes
+ 
+                            2 = No
+
+CHARTR        68     AN     Charter school.  A school that provides free elementary and/or secondary education to eligible students  
+                              under a specific charter granted by the state legislature or other appropriate authority.
+
+                            1 = Yes
+
+                            2 = No
+
+SHARED        69     AN     Shared-time school.  A school offering vocational/technical education or other education services,  
+                              in which some or all students are enrolled at a separate “home” school and attend the shared-time school  
+                              on a part-day basis.
+
+                            1 = Yes
+
+                            2 = No
+
+FRELCH	      70     N	    Count of students eligible to participate in the Free Lunch Program under the National School Lunch Act. 
+
+REDLCH	      71     N	    Count of students eligible to participate in the Reduced-Price Lunch Program under the National School Lunch Act.
+
+TOTFRL	      72     N	    Total of free lunch eligible and reduced-price lunch eligible. The total is only available if both of the details 
+			      (or the total) were reported.
+
+PK	      73     N	    Total prekindergarten students.
+
+AMPKM	      74     N	    Prekindergarten students - American Indian/Alaska Native - male.
+
+AMPKF	      75     N	    Prekindergarten students - American Indian/Alaska Native - female.
+
+ASPKM	      76     N	    Prekindergarten students - Asian - male.
+
+ASPKF	      77     N	    Prekindergarten students - Asian - female.
+
+HIPKM	      78     N	    Prekindergarten students - Hispanic - male.
+
+HIPKF	      79     N	    Prekindergarten students - Hispanic - female.
+
+BLPKM	      80     N	    Prekindergarten students - Black, non-Hispanic - male.
+
+BLPKF	      81     N	    Prekindergarten students - Black, non-Hispanic - female.
+
+WHPKM	      82     N	    Prekindergarten students - White, non-Hispanic - male.
+
+WHPKF	      83     N	    Prekindergarten students - White, non-Hispanic - female.
+
+HPPKM	      84     N	    Prekindergarten students - Hawaiian Native/Pacific Islander - male.
+
+HPPKF	      85     N	    Prekindergarten students - Hawaiian Native/Pacific Islander - female.
+
+TRPKM	      86     N	    Prekindergarten students - Two or more races - male.
+
+TRPKF	      87     N	    Prekindergarten students - Two or more races - female.
+
+KG	      88     N	    Total kindergarten students.
+
+AMKGM	      89     N	    Kindergarten students - American Indian/Alaska Native - male.
+
+AMKGF	      90     N	    Kindergarten students - American Indian/Alaska Native - female.
+
+ASKGM	      91     N	    Kindergarten students - Asian - male.
+
+ASKGF	      92     N	    Kindergarten students - Asian - female.
+
+HIKGM	      93     N	    Kindergarten students - Hispanic - male.
+
+HIKGF	      94     N	    Kindergarten students - Hispanic - female.
+
+BLKGM	      95     N	    Kindergarten students - Black, non-Hispanic - male.
+
+BLKGF	      96     N	    Kindergarten students - Black, non-Hispanic - female.
+
+WHKGM	      97     N	    Kindergarten students - White, non-Hispanic - male.
+
+WHKGF	      98     N	    Kindergarten students - White, non-Hispanic - female.
+
+HPKGM	      99    N	    Kindergarten students - Hawaiian Native/Pacific Islander - male.
+
+HPKGF	      100    N	    Kindergarten students - Hawaiian Native/Pacific Islander - female.
+
+TRKGM	      101    N	    Kindergarten students - Two or more races - male.
+
+TRKGF	      102    N	    Kindergarten students - Two or more races - female.
+
+G01	      103    N	    Total grade 1 students.
+
+AM01M	      104    N	    Grade 1 students - American Indian/Alaska Native - male.
+
+AM01F	      105    N	    Grade 1 students - American Indian/Alaska Native - female.
+
+AS01M	      106    N	    Grade 1 students - Asian - male.
+
+AS01F	      107    N	    Grade 1 students - Asian - female.
+
+HI01M	      108    N	    Grade 1 students - Hispanic - male.
+
+HI01F	      109    N	    Grade 1 students - Hispanic - female.
+
+BL01M	      110    N	    Grade 1 students - Black, non-Hispanic - male.
+
+BL01F	      111    N	    Grade 1 students - Black, non-Hispanic - female.
+
+WH01M	      112    N	    Grade 1 students - White, non-Hispanic - male.
+
+WH01F	      113    N	    Grade 1 students - White, non-Hispanic - female.
+
+HP01M	      114    N	    Grade 1 students - Hawaiian Native/Pacific Islander - male.
+
+HP01F	      115    N	    Grade 1 students - Hawaiian Native/Pacific Islander - female.
+
+TR01M	      116    N	    Grade 1 students - Two or more races - male.
+
+TR01F	      117    N	    Grade 1 students - Two or more races - female.
+
+G02	      118    N	    Total grade 2 students.
+
+AM02M	      119    N	    Grade 2 students - American Indian/Alaska Native - male.
+
+AM02F	      120    N	    Grade 2 students - American Indian/Alaska Native - female.
+
+AS02M	      121    N	    Grade 2 students - Asian - male.
+
+AS02F	      122    N	    Grade 2 students - Asian - female.
+
+HI02M	      123    N	    Grade 2 students - Hispanic - male.
+
+HI02F	      124    N	    Grade 2 students - Hispanic - female.
+
+BL02M	      125    N	    Grade 2 students - Black, non-Hispanic - male.
+
+BL02F	      126    N	    Grade 2 students - Black, non-Hispanic - female.
+
+WH02M	      127    N	    Grade 2 students - White, non-Hispanic - male.
+
+WH02F	      128    N	    Grade 2 students - White, non-Hispanic - female.
+
+HP02M	      129    N	    Grade 2 students - Hawaiian Native/Pacific Islander - male.
+
+HP02F	      130    N	    Grade 2 students - Hawaiian Native/Pacific Islander - female.
+
+TR02M	      131    N	    Grade 2 students - Two or more races - male.
+
+TR02F	      132    N	    Grade 2 students - Two or more races - female.
+
+G03	      133    N	    Total grade 3 students.
+
+AM03M	      134    N	    Grade 3 students - American Indian/Alaska Native - male.
+
+AM03F	      135    N	    Grade 3 students - American Indian/Alaska Native - female.
+
+AS03M	      136    N	    Grade 3 students - Asian - male.
+
+AS03F	      137    N	    Grade 3 students - Asian - female.
+
+HI03M	      138    N	    Grade 3 students - Hispanic - male.
+
+HI03F	      139    N	    Grade 3 students - Hispanic - female.
+
+BL03M	      140    N	    Grade 3 students - Black, non-Hispanic - male.
+
+BL03F	      141    N	    Grade 3 students - Black, non-Hispanic - female.
+
+WH03M	      142    N	    Grade 3 students - White, non-Hispanic - male.
+
+WH03F	      143    N	    Grade 3 students - White, non-Hispanic - female.
+
+HP03M	      144    N	    Grade 3 students - Hawaiian Native/Pacific Islander - male.
+
+HP03F	      145    N	    Grade 3 students - Hawaiian Native/Pacific Islander - female.
+
+TR03M	      146    N	    Grade 3 students - Two or more races - male.
+
+TR03F	      147    N	    Grade 3 students - Two or more races - female.
+
+G04	      148    N	    Total grade 4 students.
+
+AM04M	      149    N	    Grade 4 students - American Indian/Alaska Native - male.
+
+AM04F	      150    N	    Grade 4 students - American Indian/Alaska Native - female.
+
+AS04M	      151    N	    Grade 4 students - Asian - male.
+
+AS04F	      152    N	    Grade 4 students - Asian - female.
+
+HI04M	      153    N	    Grade 4 students - Hispanic - male.
+
+HI04F	      154    N	    Grade 4 students - Hispanic - female.
+
+BL04M	      155    N	    Grade 4 students - Black, non-Hispanic - male.
+
+BL04F	      156    N	    Grade 4 students - Black, non-Hispanic - female.
+
+WH04M	      157    N	    Grade 4 students - White, non-Hispanic - male.
+
+WH04F	      158    N	    Grade 4 students - White, non-Hispanic - female.
+
+HP04M	      159    N	    Grade 4 students - Hawaiian Native/Pacific Islander - male.
+
+HP04F	      160    N	    Grade 4 students - Hawaiian Native/Pacific Islander - female.
+
+TR04M	      161    N	    Grade 4 students - Two or more races - male.
+
+TR04F	      162    N	    Grade 4 students - Two or more races - female.
+
+G05	      163    N	    Total grade 5 students.
+
+AM05M	      164    N	    Grade 5 students - American Indian/Alaska Native - male.
+
+AM05F	      165    N	    Grade 5 students - American Indian/Alaska Native - female.
+
+AS05M	      166    N      Grade 5 students - Asian - male.
+
+AS05F	      167    N	    Grade 5 students - Asian - female.
+
+HI05M	      168    N	    Grade 5 students - Hispanic - male.
+
+HI05F	      169    N	    Grade 5 students - Hispanic - female.
+
+BL05M	      170    N	    Grade 5 students - Black, non-Hispanic - male.
+
+BL05F	      171    N	    Grade 5 students - Black, non-Hispanic - female.
+
+WH05M	      172    N	    Grade 5 students - White, non-Hispanic - male.
+
+WH05F	      173    N	    Grade 5 students - White, non-Hispanic - female.
+
+HP05M	      174    N	    Grade 5 students - Hawaiian Native/Pacific Islander - male.
+
+HP05F	      175    N	    Grade 5 students - Hawaiian Native/Pacific Islander - female.
+
+TR05M	      176    N	    Grade 5 students - Two or more races - male.
+
+TR05F	      177    N	    Grade 5 students - Two or more races - female.
+
+G06	      178    N	    Total grade 6 students.
+
+AM06M	      179    N	    Grade 6 students - American Indian/Alaska Native - male.
+
+AM06F	      180    N	    Grade 6 students - American Indian/Alaska Native - female.
+
+AS06M	      181    N	    Grade 6 students - Asian - male.
+
+AS06F	      182    N	    Grade 6 students - Asian - female.
+
+HI06M	      183    N	    Grade 6 students - Hispanic - male.
+
+HI06F	      184    N	    Grade 6 students - Hispanic - female.
+
+BL06M	      185    N	    Grade 6 students - Black, non-Hispanic - male.
+
+BL06F	      186    N	    Grade 6 students - Black, non-Hispanic - female.
+
+WH06M	      187    N	    Grade 6 students - White, non-Hispanic - male.
+
+WH06F	      188    N	    Grade 6 students - White, non-Hispanic - female.
+
+HP06M	      189    N	    Grade 6 students - Hawaiian Native/Pacific Islander - male.
+
+HP06F	      190    N	    Grade 6 students - Hawaiian Native/Pacific Islander - female.
+ 
+TR06M	      191    N	    Grade 6 students - Two or more races - male.
+
+TR06F	      192    N	    Grade 6 students - Two or more races - female.
+
+G07	      193    N	    Total grade 7 students.
+
+AM07M	      194    N	    Grade 7 students - American Indian/Alaska Native - male.
+
+AM07F	      195    N	    Grade 7 students - American Indian/Alaska Native - female.
+
+AS07M	      196    N      Grade 7 students - Asian - male.
+
+AS07F	      197    N	    Grade 7 students - Asian - female.
+
+HI07M	      198    N	    Grade 7 students - Hispanic - male.
+
+HI07F	      199    N	    Grade 7 students - Hispanic - female.
+
+BL07M	      200    N	    Grade 7 students - Black, non-Hispanic - male.
+
+BL07F	      201    N	    Grade 7 students - Black, non-Hispanic - female.
+
+WH07M	      202    N	    Grade 7 students - White, non-Hispanic - male.
+
+WH07F	      203    N	    Grade 7 students - White, non-Hispanic - female.
+
+HP07M	      204    N	    Grade 7 students - Hawaiian Native/Pacific Islander - male.
+
+HP07F	      205    N	    Grade 7 students - Hawaiian Native/Pacific Islander - female.
+
+TR07M	      206    N	    Grade 7 students - Two or more races - male.
+
+TR07F	      207    N	    Grade 7 students - Two or more races - female.
+
+G08	      208    N	    Total grade 8 students.
+
+AM08M	      209    N	    Grade 8 students - American Indian/Alaska Native - male.
+
+AM08F	      210    N	    Grade 8 students - American Indian/Alaska Native - female.
+
+AS08M	      211    N	    Grade 8 students - Asian - male.
+
+AS08F	      212    N	    Grade 8 students - Asian - female.
+
+HI08M	      213    N	    Grade 8 students - Hispanic - male.
+
+HI08F	      214    N	    Grade 8 students - Hispanic - female.
+
+BL08M	      215    N	    Grade 8 students - Black, non-Hispanic - male.
+  
+BL08F	      216    N	    Grade 8 students - Black, non-Hispanic - female.
+
+WH08M	      217    N	    Grade 8 students - White, non-Hispanic - male.
+
+WH08F	      218    N	    Grade 8 students - White, non-Hispanic - female.
+
+HP08M	      219    N	    Grade 8 students - Hawaiian Native/Pacific Islander - male.
+
+HP08F	      220    N	    Grade 8 students - Hawaiian Native/Pacific Islander - female.
+
+TR08M	      221    N	    Grade 8 students - Two or more races - male.
+
+TR08F	      222    N	    Grade 8 students - Two or more races - female.
+
+G09	      223    N	    Total grade 9 students.
+
+AM09M	      224    N	    Grade 9 students - American Indian/Alaska Native - male.
+
+AM09F	      225    N	    Grade 9 students - American Indian/Alaska Native - female.
+
+AS09M	      226    N	    Grade 9 students - Asian - male.
+
+AS09F	      227    N	    Grade 9 students - Asian - female.
+
+HI09M	      228    N	    Grade 9 students - Hispanic - male.
+
+HI09F	      229    N      Grade 9 students - Hispanic - female.
+
+BL09M	      230    N	    Grade 9 students - Black, non-Hispanic - male.
+
+BL09F	      231    N	    Grade 9 students - Black, non-Hispanic - female.
+
+WH09M	      232    N	    Grade 9 students - White, non-Hispanic - male.
+
+WH09F	      233    N      Grade 9 students - White, non-Hispanic - female.
+
+HP09M	      234    N	    Grade 9 students - Hawaiian Native/Pacific Islander - male.
+
+HP09F	      235    N	    Grade 9 students - Hawaiian Native/Pacific Islander - female.
+
+TR09M	      236    N	    Grade 9 students - Two or more races - male.
+
+TR09F	      237    N	    Grade 9 students - Two or more races - female.
+
+G10	      238    N	    Total grade 10 students.
+
+AM10M	      239    N	    Grade 10 students - American Indian/Alaska Native - male.
+
+AM10F	      240    N	    Grade 10 students - American Indian/Alaska Native - female.
+
+AS10M	      241    N	    Grade 10 students - Asian - male.
+
+AS10F	      242    N	    Grade 10 students - Asian - female.
+
+HI10M	      243    N	    Grade 10 students - Hispanic - male.
+
+HI10F	      244    N	    Grade 10 students - Hispanic - female.
+
+BL10M	      245    N	    Grade 10 students - Black, non-Hispanic - male.
+
+BL10F	      246    N	    Grade 10 students - Black, non-Hispanic - female.
+
+WH10M	      247    N	    Grade 10 students - White, non-Hispanic - male.
+
+WH10F	      248    N	    Grade 10 students - White, non-Hispanic - female.
+
+HP10M	      249    N	    Grade 10 students - Hawaiian Native/Pacific Islander - male.
+
+HP10F	      250    N	    Grade 10 students - Hawaiian Native/Pacific Islander - female.
+
+TR10M	      251    N	    Grade 10 students - Two or more races - male.
+
+TR10F	      252    N      Grade 10 students - Two or more races - female.
+
+G11	      253    N	    Total grade 11 students.
+
+AM11M	      254    N	    Grade 11 students - American Indian/Alaska Native - male.
+
+AM11F	      255    N	    Grade 11 students - American Indian/Alaska Native - female.
+
+AS11M	      256    N	    Grade 11 students - Asian - male.
+
+AS11F	      257    N	    Grade 11 students - Asian - female.
+
+HI11M	      258    N	    Grade 11 students - Hispanic - male.
+
+HI11F	      259    N      Grade 11 students - Hispanic - female.
+
+BL11M	      260    N	    Grade 11 students - Black, non-Hispanic - male.
+
+BL11F	      261    N	    Grade 11 students - Black, non-Hispanic - female.
+
+WH11M	      262    N	    Grade 11 students - White, non-Hispanic - male.
+
+WH11F	      263    N	    Grade 11 students - White, non-Hispanic - female.
+
+HP11M	      264    N	    Grade 11 students - Hawaiian Native/Pacific Islander - male.
+
+HP11F	      265    N	    Grade 11 students - Hawaiian Native/Pacific Islander - female.
+
+TR11M	      266    N	    Grade 11 students - Two or more races - male.
+
+TR11F	      267    N	    Grade 11 students - Two or more races - female.
+
+G12	      268    N	    Total grade 12 students.
+
+AM12M	      269    N	    Grade 12 students - American Indian/Alaska Native - male.
+
+AM12F	      270    N	    Grade 12 students - American Indian/Alaska Native - female.
+
+AS12M	      271    N	    Grade 12 students - Asian - male.
+
+AS12F	      272    N	    Grade 12 students - Asian - female.
+
+HI12M	      273    N	    Grade 12 students - Hispanic - male.
+
+HI12F	      274    N	    Grade 12 students - Hispanic - female.
+
+BL12M	      275    N	    Grade 12 students - Black, non-Hispanic - male.
+
+BL12F	      276    N	    Grade 12 students - Black, non-Hispanic - female.
+
+WH12M	      277    N	    Grade 12 students - White, non-Hispanic - male.
+
+WH12F	      278    N	    Grade 12 students - White, non-Hispanic - female.
+
+HP12M	      279    N	    Grade 12 students - Hawaiian Native/Pacific Islander - male.
+
+HP12F	      280    N	    Grade 12 students - Hawaiian Native/Pacific Islander - female.
+
+TR12M	      281    N	    Grade 12 students - Two or more races - male.
+
+TR12F	      282    N	    Grade 12 students - Two or more races - female.
+
+UG	      283    N	    Total ungraded students.
+
+AMUGM	      284    N	    Ungraded students - American Indian/Alaska Native - male.
+
+AMUGF	      285    N	    Ungraded students - American Indian/Alaska Native - female.
+
+ASUGM	      286    N	    Ungraded students - Asian - male.
+
+ASUGF	      287    N	    Ungraded students - Asian - female.
+
+HIUGM	      288    N	    Ungraded students - Hispanic - male.
+
+HIUGF	      289    N	    Ungraded students - Hispanic - female.
+
+BLUGM	      290    N	    Ungraded students - Black, non-Hispanic - male.
+
+BLUGF	      291    N	    Ungraded students - Black, non-Hispanic - female.
+ 
+WHUGM	      292    N	    Ungraded students - White, non-Hispanic - male.
+
+WHUGF	      293    N	    Ungraded students - White, non-Hispanic - female.
+
+HPUGM	      294    N	    Ungraded students - Hawaiian Native/Pacific Islander - male.
+
+HPUGF	      295    N	    Ungraded students - Hawaiian Native/Pacific Islander - female.
+
+TRUGM	      296    N	    Ungraded students - Two or more races - male.
+
+TRUGF	      297    N	    Ungraded students - Two or more races - female.
+
+MEMBER	      298    N	    Total students, all grades:  The reported total membership of the school.
+
+AM	      299    N	    American Indian/Alaska Native students.  If not reported, this field was calculated by summing the AMALM and AMALF fields.
+
+AMALM	      300    N	    Total students, all grades - American Indian/Alaska Native - male.
+
+AMALF	      301    N	    Total students, all grades - American Indian/Alaska Native - female.
+
+ASIAN	      302    N	    Asian students.  If not reported, this field was calculated by summing the ASALM and ASALF fields.
+
+ASALM	      303    N	    Total students, all grades - Asian - male.
+
+ASALF	      304    N	    Total students, all grades - Asian - female.
+
+HISP	      305    N	    Hispanic students.  If not reported, this field was calculated by summing the HIALM and HIALF fields.
+
+HIALM	      306    N	    Total students, all grades - Hispanic - male.
+
+HIALF	      307    N	    Total students, all grades - Hispanic - female.
+
+BLACK	      308    N	    Black, non-Hispanic students.  If not reported, this field was calculated by summing the BLALM and BLALF fields.
+
+BLALM	      309    N	    Total students, all grades - Black, non-Hispanic - male.
+
+BLALF	      310    N	    Total students, all grades - Black, non-Hispanic - female.
+
+WHITE	      311    N	    White, non-Hispanic students.  If not reported, this field was calculated by summing the WHALM and WHALF fields.
+
+WHALM	      312    N	    Total students, all grades - White, non-Hispanic - male.
+
+WHALF	      313    N	    Total students, all grades - White, non-Hispanic - female.
+
+PACIFIC	      314    N	    Hawaiian Native/Pacific Islander students.  If not reported, this field was calculated by summing the HPALM and HPALF fields.
+
+HPALM	      315    N	    Total students, all grades - Hawaiian Native/Pacific Islander - male.
+
+HPALF	      316    N	    Total students, all grades - Hawaiian Native/Pacific Islander - female.
+
+TR	      317    N	    Two or more races students.  If not reported, this field was calculated by summing the TRALM and TRALF fields.
+
+TRALM	      318    N	    Total students, all grades - Two or more races - male.
+
+TRALF	      319    N	    Total students, all grades - Two or more races - female.
+
+TOTETH	      320    N	    Calculated school race/ethnicity membership: The sum of the fields AM, ASIAN, HISP, BLACK, WHITE, PACIFIC, and TR. 
+			      Students belonging to an unknown or non-CCD race category are not captured in this field.  
+
+VIRTUALSTAT   321    AN     Identifies whether the school is a virtual school.
+
+                            1 = Yes
+
+                            2 = No
+
+NSLPSTATUS    322    AN     Represents the National School Lunch Program (NSLP) Status for the school. The accepted values are:
+
+                            NSLPWOPRO = Yes, participating without using any Provision or the CEO
+
+                            NSLPPRO1 = Yes, under Provision 1
+
+                            NSLPPRO2 = Yes, under Provision 2
+
+                            NSLPPRO3 = Yes, under Provision 3
+
+                            NSLPCEO = Yes, under Community Eligibility Option (CEO)
+
+                            NSLPNO = No
+
+CHARTAUTH1    323    AN     The identifier assigned to the primary public charter school authorizing agency by the SEA.
+
+CHARTAUTH2    324    AN     The identifier assigned to the secondary public charter school authorizing agency by the SEA.
