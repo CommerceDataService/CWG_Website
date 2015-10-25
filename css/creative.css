@@ -166,7 +166,7 @@ aside {
     }
 }
 
-.backie {
+.backie1 {
     position: relative;
 
     height:100%;
@@ -175,7 +175,7 @@ aside {
 
     text-align: center;
     color: #fff;
-    background-image: url(../img/hallway.png);
+    background-image: url(../img/cover.001.png);
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -194,13 +194,31 @@ aside {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(http://rotater.s3-website-us-west-2.amazonaws.com/census.gif);
+    background-image: url(../img/cover.002.png);
     background-opacity: 0.6;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
+
+.backie3 {
+    position: relative;
+    width: 100%;
+    height:80%;
+    opacity: 0.6;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/cover.003.png);
+    background-opacity: 0.6;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 
 
 header .header-content {
