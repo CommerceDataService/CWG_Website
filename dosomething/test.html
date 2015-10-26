@@ -1,0 +1,66 @@
+<html>
+    <head>
+    <style>
+        body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+        </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+  
+<div class="navbar navbar-fixed-top">
+    </div>
+
+    <div class="container">
+      
+      
+      <div class="row">
+        <!-- Parents Caretakers and Social Workers-->
+        <div class="span4 collapse-group">
+          <h3>Parents, Caretakers + Social Workers</h3>
+           <p class="collapse">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">Learn more &raquo;</a></p>
+        </div>
+          
+        <!--Schools-->
+        <div class="span4 collapse-group">
+          <h3>Schools</h3>
+           <p class="collapse">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">Learn more &raquo;</a></p>
+        </div>
+          
+        <!--Teachers-->
+        <div class="span4 collapse-group">
+          <h3>Teachers</h3>
+           <p class="collapse">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">Learn more &raquo;</a></p>
+        </div>
+          
+        <!--Students-->
+        <div class="span4 collapse-group">
+          <h3>Students</h3>
+           <p class="collapse">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">Learn more &raquo;</a></p>
+        </div>
+          
+      </div>
+    
+    </div>
+
+  </body>
+    
+        <script>
+        $('.row .btn').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $collapse = $this.closest('.collapse-group').find('.collapse');
+            $collapse.collapse('toggle');
+        });
+        </script>
+</html>
